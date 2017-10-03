@@ -1,0 +1,100 @@
+<html>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+   <body>
+       <h1> EMAIL ENCRYPTION </h1>
+           <br>
+           <br>
+        <form id="emails" method="post" action="" enctype="multipart/form-data" role="form">
+            <input type="hidden" name="f" value="refresh">
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="submit" class="btn btn-success btn-send" value="Load Emails">
+                </div>
+                <div class="col-md-6">
+                    <label for="passphrase">Passphrase</label>
+                    <input type="password" class="form-control" name="passphrase" required="true" data-error"incorrect">
+                </div>
+            </div>
+        </form>
+    <form id="addtogroup" method="post" action"" enctype="multipart/form-data" role="form">
+        <h3>ADD Members</h3>
+        <input type="hidden" name="f" value="add">
+        <div class="controls">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_email">Email Address</label>
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Email" required="true" data-error="Valid email is required.">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_email">Public Key</label>
+                        <input id="form_email" type="text" name="publickey" class="form-control" placeholder="Public Key" required="true" data-error="Valid email is required.">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+            </div>
+    <input type="submit" class="btn btn-success btn-send" value="Add to group">
+</form>
+<form id="removefromgroup" method="post" action"" enctype="multipart/form-data" role="form">
+    <h3>REMOVE Members</h3>
+    <input type="hidden" name="f" value="remove">
+    <div class="controls">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email Address</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Email" required="true" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+    <input type="submit" class="btn btn-success btn-send" value="Remove from group">
+</form>
+
+    <form id="email-form" method="post" action="" enctype="multipart/form-data" role="form">
+        <h3> COMPOSE EMAIL</h3>
+
+    <input type="hidden" name="f" value="email">
+    <div class="messages"></div>
+    <div class="controls">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">To *</label>
+                    <input id="form_email" type="email" name="to" class="form-control" placeholder="Email To:" required="true" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_phone">Subject</label>
+                    <input id="form_phone" type="text" name="subject" class="form-control" placeholder="Please enter a subject">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message" rows="4" required="true" data-error="Please enter a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send message">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted"><strong>*</strong> These fields are required.</p>
+            </div>
+        </div>
+    </div>
+</form>
+<h2>Decrypted Emails </h2>
