@@ -1,5 +1,5 @@
 # Email-Encryption
-A secure client for Gmail which allows users to send a receive encrypted emails
+A secure client for Gmail which allows users to send and receive encrypted emails.
 
 To set-up, replace the client_secret.json with your own version.
 
