@@ -36,7 +36,7 @@ function makeMail() {
         "MIME-Version: 1.0\n",
         "Content-Transfer-Encoding: 7bit\n",
         "to: ", options.to, "\n",
-        "from: sean\n",
+        "from: \n",
         "subject: ", options.subject, "\n\n",
         options.encrypted
     ].join('');
